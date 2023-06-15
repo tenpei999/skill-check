@@ -23,9 +23,9 @@ body {
 
 
 html {
-  font-size: $baseFontSize;
+  font-size: 62.5%;
 
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 62.5%;
 }
 
 @media #{$sp} {
@@ -80,4 +80,12 @@ a img.u-hover {
   &:hover {
     @include hover;
   }
+}
+
+// *********************************************
+// # text
+// *********************************************
+
+p {
+  font-size: 1.6rem;
 }

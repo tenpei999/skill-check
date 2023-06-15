@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DONUTS FRONTEND EXAM</title>
-  <script src="./_src/js/index.js"></script>
+  <link rel="stylesheet" href="static/css/style.css">
+  <script src="_src/js/index.js"></script>
 </head>
 
 <body>
   <header class="p-header">
-    <h1 class="p-title__site">DONUTS FRONTEND EXAM</h1>
+    <h1 class="c-title__site">DONUTS FRONTEND EXAM</h1>
   </header>
   <main>
     <section class="l-inner p-overview">
@@ -33,11 +34,16 @@
         <h3 class="c-title__paragraph--content">1. デザインに従ってコーディングをしてください</h3>
         <p>
           https://xd.adobe.com/view/6326e7bd-2396-4838-8359-32f096cac59d-3675/のデザインに沿って(問題文等も含めて)コーディングをしてください。
-          <br>なお、ベースとなるソースコードは https://github.com/d-o-n-u-t-s/web-frontend-exam/ を Cloneしてご使用ください。
+        </p>
+        <p>
+          なお、ベースとなるソースコードは https://github.com/d-o-n-u-t-s/web-frontend-exam/ を Cloneしてご使用ください。
         </p>
         <h3 class="c-title__paragraph--content">2. レスポンシブにコーディングしてください</h3>
         <p>
-          PC、モバイルそれぞれで何か1つのブラウザで確認できる状態にしてください。 <br>なお、提出時に確認済みブラウザを共有下さい。
+          PC、モバイルそれぞれで何か1つのブラウザで確認できる状態にしてください。
+        </p>
+        <p>
+          なお、提出時に確認済みブラウザを共有下さい。
         </p>
       </section>
       <section>
@@ -48,10 +54,24 @@
         <p>
           ・天気予報 API（livedoor 天気互換） … <a>https://weather.tsukumijima.net/</a>
         </p>
-        <small>※ weatherCodeに対応する天候名とアイコンの取得はgetWeatherInfo.js を使用してよいものとします。</small>
-        <small>※ どちらも観測地点は東京とし、(緯度, 経度) = (35.6785, 139.6823) とします。</small>
-        <small>※ APIからの取得が難しい場合は、レイアウトのみ再現してください。</small>
+        <ul>
+          <li>
+            <small>※ weatherCodeに対応する天候名とアイコンの取得はgetWeatherInfo.js を使用してよいものとします。</small>
+          </li>
+          <li>
+            <small>※ どちらも観測地点は東京とし、(緯度, 経度) = (35.6785, 139.6823) とします。</small>
+          </li>
+          <li>
+            <small>※ APIからの取得が難しい場合は、レイアウトのみ再現してください。</small>
+          </li>
+        </ul>
         <h3 class="c-title__paragraph--content">4. 以下のいずれかの方法で提出をしてください</h3>
+        <p>
+          ・ご自身のgithub上にリポジトリを作成し、そこにpushした上で、リポジトリURLを共有する。
+        </p>
+        <p>
+          ・clone先のディレクトリを.gitディレクトリを含んだ状態で圧縮(zip, tar等)し、添付して提出する。
+        </p>
       </section>
     </section>
     <section class="l-inner p-weather--today">

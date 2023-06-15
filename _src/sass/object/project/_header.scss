@@ -1,0 +1,7 @@
+.p-header {
+  background: linear-gradient(90deg, rgb(4,166,241),rgb(1,106,200));
+  height: 98px;
+  @include mq (screen01) {
+    height: 134px;
+  }
+}
