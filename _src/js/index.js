@@ -41,7 +41,6 @@ Promise.all([request1, request2])
     const oneWeekLatersMaxTemp = data2.daily.temperature_2m_max[6]; 
 
     //最低気温
-
     const todaysMinTemp = today.temperature.min;
     const tommorowsMinTemp = tommorow.temperature.min;
     const dayAfterTommorowsMinTemp = data2.daily.temperature_2m_min[2]; 

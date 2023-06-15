@@ -15,24 +15,63 @@
   <main>
     <section class="l-inner p-overview">
       <h2 class="c-title__section">試験概要</h2>
-      <h3 class="c-title__paragraph--overview">・フロントエンドエンジニア職に応募の方</h3>
-      <h3 class="c-title__paragraph--overview">・デザイナー職に応募の方</h3>
+      <p>コーディング課題（試験内容）に取り組んでいただきたく、ご案内お願いいたします。</p>
+      <section>
+        <h3 class="c-title__paragraph--overview">・フロントエンドエンジニア職に応募の方</h3>
+        <p>・1 〜 4すべてご対応ください。</p>
+        <p>・「4. 提出方法」に関して、githubでの提出を推奨します。</p>
+      </section>
+      <section>
+        <h3 class="c-title__paragraph--overview">・デザイナー職に応募の方</h3>
+        <p>・「3. APIによる反映」 の対応は不要です。</p>
+        <p>・「4. 提出方法」に関して、githubでの提出が難しい場合、圧縮ファイルでの提出でも可です。</p>
+      </section>
     </section>
     <section class="l-inner p-content">
       <h2 class="c-title__section">試験内容</h2>
-      <h3 class="c-title__paragraph--content">1. デザインに従ってコーディングをしてください</h3>
-      <h3 class="c-title__paragraph--content">2. レスポンシブにコーディングしてください</h3>
-      <h3 class="c-title__paragraph--content">3. 以下のAPIを使って、天気情報を動的に取得し反映させてください</h3>
-      <h3 class="c-title__paragraph--content">4. 以下のいずれかの方法で提出をしてください</h3>
+      <section>
+        <h3 class="c-title__paragraph--content">1. デザインに従ってコーディングをしてください</h3>
+        <p>
+          https://xd.adobe.com/view/6326e7bd-2396-4838-8359-32f096cac59d-3675/のデザインに沿って(問題文等も含めて)コーディングをしてください。
+          <br>なお、ベースとなるソースコードは https://github.com/d-o-n-u-t-s/web-frontend-exam/ を Cloneしてご使用ください。
+        </p>
+        <h3 class="c-title__paragraph--content">2. レスポンシブにコーディングしてください</h3>
+        <p>
+          PC、モバイルそれぞれで何か1つのブラウザで確認できる状態にしてください。 <br>なお、提出時に確認済みブラウザを共有下さい。
+        </p>
+      </section>
+      <section>
+        <h3 class="c-title__paragraph--content">3. 以下のAPIを使って、天気情報を動的に取得し反映させてください</h3>
+        <p>
+          ・Open-Meteo WeatherForecastAPI ... <a>https://open-meteo.com/en/docs/</a>
+        </p>
+        <p>
+          ・天気予報 API（livedoor 天気互換） … <a>https://weather.tsukumijima.net/</a>
+        </p>
+        <small>※ weatherCodeに対応する天候名とアイコンの取得はgetWeatherInfo.js を使用してよいものとします。</small>
+        <small>※ どちらも観測地点は東京とし、(緯度, 経度) = (35.6785, 139.6823) とします。</small>
+        <small>※ APIからの取得が難しい場合は、レイアウトのみ再現してください。</small>
+        <h3 class="c-title__paragraph--content">4. 以下のいずれかの方法で提出をしてください</h3>
+      </section>
     </section>
     <section class="l-inner p-weather--today">
       <h2 class="c-title__section">今日/明日の天気</h2>
-      <p>今日の天気<span id="todaysWeather"></span></p>
-      <p>明日の天気<span id="tommorowsWeather"></span></p>
-      <img src="https://www.jma.go.jp/bosai/forecast/img/100.svg">
+      <article class="c-weather is-today">
+        <h3>今日の天気<span id="todaysWeather"></span></h3>
+      </article>
+      <article class="c-weather is-tommorow">
+        <h3>明日の天気<span id="tommorowsWeather"></span></h3>
+      </article>
     </section>
     <section class="l-inner p-weather--week">
       <h2 class="c-title__section">今週の天気</h2>
+      <ul class="p-weather--week__container">
+        <li class="dayAfterTommorw"></li>
+        <li class="forDaysLayter"></li>
+        <li class="fiveDaisLayter"></li>
+        <li class="sixDaysLaiter"></li>
+        <li class="oneWeekLater"></li>
+      </ul>
     </section>
   </main>
   <footer>
