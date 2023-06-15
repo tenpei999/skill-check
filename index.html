@@ -1,11 +1,68 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>DONUTS FRONTEND EXAM</title>
 </head>
+
 <body>
-  
+  <header class="p-header">
+    <h1 class="p-title__site">DONUTS FRONTEND EXAM</h1>
+  </header>
+  <main>
+    <section class="l-inner p-overview">
+      <h2 class="c-title__section">試験概要</h2>
+      <h3 class="c-title__paragraph--overview">・フロントエンドエンジニア職に応募の方</h3>
+      <h3 class="c-title__paragraph--overview">・デザイナー職に応募の方</h3>
+    </section>
+    <section class="l-inner p-content">
+      <h2 class="c-title__section">試験内容</h2>
+      <h3 class="c-title__paragraph--content">1. デザインに従ってコーディングをしてください</h3>
+      <h3 class="c-title__paragraph--content">2. レスポンシブにコーディングしてください</h3>
+      <h3 class="c-title__paragraph--content">3. 以下のAPIを使って、天気情報を動的に取得し反映させてください</h3>
+      <h3 class="c-title__paragraph--content">4. 以下のいずれかの方法で提出をしてください</h3>
+    </section>
+    <section class="l-inner p-weather--today">
+      <h2 class="c-title__section">今日/明日の天気</h2>
+      <script>
+        var request = new XMLHttpRequest();
+
+        request.open('GET', 'https://weather.tsukumijima.net/api/forecast/city/130010', true);
+        request.responseType = 'json';
+
+        request.onload = function () {
+          var data = this.response;
+          console.log(data.title);
+          console.log(data.forecasts[0].detail);
+          let today = data.forecasts[0];
+          let tommorow = data.forecasts[1];
+          let todaysWeather = today.detail.weather;
+          let tommorowsWeather = tommorow.detail.weather;
+
+          var todayElementId = 'todaysWeather';
+          var tommorowElementId = 'tommorowsWeather';
+
+          var todayElement = document.getElementById(todayElementId);
+          var tommorowElement = document.getElementById(tommorowElementId);
+
+          todayElement.innerHTML = todaysWeather;
+          tommorowElement.innerHTML = tommorowsWeather;
+        };
+        request.send();
+      </script>
+      <p>今日の天気<span id="todaysWeather"></span></p>
+      <p>明日の天気<span id="tommorowsWeather"></span></p>
+      <img src="https://www.jma.go.jp/bosai/forecast/img/100.svg">
+    </section>
+    <section class="l-inner p-weather--week">
+      <h2 class="c-title__section">今週の天気</h2>
+    </section>
+  </main>
+  <footer>
+    &copy; DONUTS Co. Ltd.
+  </footer>
 </body>
+
 </html>
