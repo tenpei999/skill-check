@@ -12,7 +12,7 @@
 
   &__section {
     text-align: center;
-    padding-top: 80px;
+    margin-bottom: 60px;
 
     p {
       position: relative;
@@ -30,6 +30,15 @@
         border-radius: 5px;
         background: $linearBrue;
       }
+    }
+  }
+
+  &__paragraph {
+    &--overview {
+      color: $textBlack1;
+    }
+    &--content {
+      color: $textBlue1;
     }
   }
 }

@@ -13,6 +13,7 @@ body {
   letter-spacing: $baseLetterSpacing;
   line-height: $baseLineHeight;
   -webkit-font-smoothing: antialiased;
+  font-size: 1.6rem;
 }
 
 @media #{$sp} {

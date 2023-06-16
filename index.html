@@ -24,34 +24,34 @@
     <h1 class="c-title__site">DONUTS FRONTEND EXAM</h1>
   </header>
   <main>
-    <section class="c-bg__color p-overview">
+    <section class="c-bg__color p-overview u-pb80 u-pt80">
       <h2 class="c-title__section">
         <p>
           試験概要
         </p>
       </h2>
       <div class="l-inner">
-        <p>コーディング課題（試験内容）に取り組んでいただきたく、ご案内お願いいたします。</p>
-        <section>
+        <p class="u-pb15">コーディング課題（試験内容）に取り組んでいただきたく、ご案内お願いいたします。</p>
+        <section class="p-overview__paragraph">
           <h3 class="c-title__paragraph--overview">・フロントエンドエンジニア職に応募の方</h3>
           <p>・1 〜 4すべてご対応ください。</p>
           <p>・「4. 提出方法」に関して、githubでの提出を推奨します。</p>
         </section>
-        <section>
+        <section class="p-overview__paragraph">
           <h3 class="c-title__paragraph--overview">・デザイナー職に応募の方</h3>
           <p>・「3. APIによる反映」 の対応は不要です。</p>
           <p>・「4. 提出方法」に関して、githubでの提出が難しい場合、圧縮ファイルでの提出でも可です。</p>
         </section>
       </div>
     </section>
-    <section class="p-content">
+    <section class="p-content u-pb80 u-pt80">
       <h2 class="c-title__section">
         <p>
           試験内容
         </p>
       </h2>
       <div class="l-inner">
-        <section>
+        <section class="u-pb30">
           <h3 class="c-title__paragraph--content">1. デザインに従ってコーディングをしてください</h3>
           <p>
             https://xd.adobe.com/view/6326e7bd-2396-4838-8359-32f096cac59d-3675/のデザインに沿って(問題文等も含めて)コーディングをしてください。
@@ -59,6 +59,8 @@
           <p>
             なお、ベースとなるソースコードは https://github.com/d-o-n-u-t-s/web-frontend-exam/ を Cloneしてご使用ください。
           </p>
+        </section>
+        <section class="u-pb30">
           <h3 class="c-title__paragraph--content">2. レスポンシブにコーディングしてください</h3>
           <p>
             PC、モバイルそれぞれで何か1つのブラウザで確認できる状態にしてください。
@@ -67,7 +69,7 @@
             なお、提出時に確認済みブラウザを共有下さい。
           </p>
         </section>
-        <section>
+        <section class="u-pb30">
           <h3 class="c-title__paragraph--content">3. 以下のAPIを使って、天気情報を動的に取得し反映させてください</h3>
           <p>
             ・Open-Meteo WeatherForecastAPI ... <a>https://open-meteo.com/en/docs/</a>
@@ -75,7 +77,7 @@
           <p>
             ・天気予報 API（livedoor 天気互換） … <a>https://weather.tsukumijima.net/</a>
           </p>
-          <ul>
+          <ul class="p-content__smalls u-pt15">
             <li>
               <small>※ weatherCodeに対応する天候名とアイコンの取得はgetWeatherInfo.js を使用してよいものとします。</small>
             </li>
@@ -86,6 +88,8 @@
               <small>※ APIからの取得が難しい場合は、レイアウトのみ再現してください。</small>
             </li>
           </ul>
+        </section>
+        <section class="u-pb30">
           <h3 class="c-title__paragraph--content">4. 以下のいずれかの方法で提出をしてください</h3>
           <p>
             ・ご自身のgithub上にリポジトリを作成し、そこにpushした上で、リポジトリURLを共有する。
@@ -96,7 +100,7 @@
         </section>
       </div>
     </section>
-    <section class="c-bg__color p-weather--today">
+    <section class="c-bg__color p-weather--today u-pb80 u-pt80">
       <h2 class="c-title__section">
         <p>
           今日/明日の天気
@@ -111,7 +115,7 @@
         </article>
       </div>
     </section>
-    <section class="p-weather--week">
+    <section class="p-weather--week u-pb80 u-pt80">
       <h2 class="c-title__section">
         <p>
           今週の天気

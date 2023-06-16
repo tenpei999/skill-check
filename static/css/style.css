@@ -243,6 +243,7 @@ body {
   letter-spacing: 0;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
+  font-size: 1.6rem;
 }
 
 @media only screen and (max-width: 736px) {
@@ -376,7 +377,7 @@ p {
 
 .c-title__section {
   text-align: center;
-  padding-top: 80px;
+  margin-bottom: 60px;
 }
 
 .c-title__section p {
@@ -397,8 +398,20 @@ p {
   background: linear-gradient(90deg, #04a6f1, #016ac8);
 }
 
+.c-title__paragraph--overview {
+  color: #424242;
+}
+
+.c-title__paragraph--content {
+  color: #4A90E2;
+}
+
 .c-bg__color {
   background: #F7F9FB 0% 0% no-repeat padding-box;
+}
+
+.p-content__smalls {
+  line-height: 1;
 }
 
 .p-footer {
@@ -420,6 +433,14 @@ p {
   .p-header {
     height: 134px;
   }
+}
+
+.p-overview__paragraph p {
+  padding-left: 1.6rem;
+}
+
+.p-overview__paragraph:first-of-type {
+  padding-bottom: 0.8rem;
 }
 
 .u-mt0 {

@@ -1,0 +1,10 @@
+.p-overview {
+  &__paragraph {
+    p {
+      padding-left: 1.6rem;
+    }
+    &:first-of-type {
+      padding-bottom: 0.8rem;
+    }
+  }
+}
