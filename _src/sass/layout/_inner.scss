@@ -1,4 +1,6 @@
 .l-inner {
-  max-width: $pcmax;
-  margin: auto;
+  @media #{$pc} {
+    max-width: $pcmax;
+    margin: auto;
+  }
 }

@@ -336,9 +336,11 @@ p {
   src: local("Noto Sans JP Bold"), url("../fonts/NotoSansJP-Bold.woff2") format("woff2");
 }
 
-.l-inner {
-  max-width: 1920px;
-  margin: auto;
+@media only screen and (min-width: 737px) {
+  .l-inner {
+    max-width: 1000px;
+    margin: auto;
+  }
 }
 
 .c-br--title__site {
