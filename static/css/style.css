@@ -341,6 +341,10 @@ p {
   margin: auto;
 }
 
+.c-text__footer small {
+  font-size: 1.2rem;
+}
+
 .c-title__site {
   color: #fff;
   font-size: 3rem;
@@ -351,6 +355,13 @@ p {
   .c-title__site {
     font-size: 3.6rem;
   }
+}
+
+.p-footer {
+  height: 134px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .p-header {
