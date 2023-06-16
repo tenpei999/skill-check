@@ -1,0 +1,10 @@
+.c-br {
+  &--title {
+    &__site {
+      display: block;
+      @media #{$pc} {
+        display: none;
+      }
+    }
+  }
+}

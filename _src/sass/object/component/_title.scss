@@ -3,8 +3,33 @@
     color: #fff;
     font-size: 3rem;
     letter-spacing: 1.8px;
+    text-align: center;
+
     @media #{$pc} {
       font-size: 3.6rem;
+    }
+  }
+
+  &__section {
+    text-align: center;
+    padding-top: 80px;
+
+    p {
+      position: relative;
+      font-size: $fontSizeLv1;
+      letter-spacing: 1.5px;
+      display: inline-block;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 8px;
+        width: 50%;
+        bottom: -17px;
+        right: 25%;
+        border-radius: 5px;
+        background: $linearBrue;
+      }
     }
   }
 }
