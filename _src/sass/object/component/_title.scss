@@ -1,5 +1,10 @@
 .c-title {
   &__site {
-
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: 1.8px;
+    @media #{$pc} {
+      font-size: 3.6rem;
+    }
   }
 }

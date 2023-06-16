@@ -1,7 +1,11 @@
 .p-header {
-  background: linear-gradient(90deg, rgb(4,166,241),rgb(1,106,200));
+  background: linear-gradient(90deg, rgb(4, 166, 241), rgb(1, 106, 200));
   height: 98px;
-  @include mq (screen01) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media #{$pc} {
     height: 134px;
   }
 }

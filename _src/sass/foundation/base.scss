@@ -1,6 +1,7 @@
 // *******************************************************************************************************
 // # base
 // *******************************************************************************************************/
+$skillCheckFontFamily: "noto-sans-cjk-jp", sans-serif;
 
 body {
   overflow-x: scroll;
@@ -8,10 +9,9 @@ body {
   min-width: $baseContentsWidth;
   background-color: #fff;
   color: $baseTextColor;
-  font-family: $baseFontFamily;
+  font-family: $skillCheckFontFamily;
   letter-spacing: $baseLetterSpacing;
   line-height: $baseLineHeight;
-
   -webkit-font-smoothing: antialiased;
 }
 

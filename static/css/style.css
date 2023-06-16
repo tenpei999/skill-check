@@ -239,7 +239,7 @@ body {
   min-width: 1112px;
   background-color: #fff;
   color: #333;
-  font-family: "Noto Sans JP";
+  font-family: "noto-sans-cjk-jp", sans-serif;
   letter-spacing: 0;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
@@ -336,17 +336,32 @@ p {
   src: local("Noto Sans JP Bold"), url("../fonts/NotoSansJP-Bold.woff2") format("woff2");
 }
 
-/* mixin */
 .l-inner {
   max-width: 1920px;
+  margin: auto;
+}
+
+.c-title__site {
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 1.8px;
+}
+
+@media only screen and (min-width: 737px) {
+  .c-title__site {
+    font-size: 3.6rem;
+  }
 }
 
 .p-header {
   background: linear-gradient(90deg, #04a6f1, #016ac8);
   height: 98px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media screen and (min-width: 820px) {
+@media only screen and (min-width: 737px) {
   .p-header {
     height: 134px;
   }
