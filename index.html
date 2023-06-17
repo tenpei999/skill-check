@@ -16,7 +16,8 @@
   </script>
   <title>DONUTS FRONTEND <br class="c-br--title__site">EXAM</title>
   <link rel="stylesheet" href="static/css/style.css">
-  <script src="_src/js/index.js"></script>
+
+  <script src="_src/dist/js/index.js"></script>
 </head>
 
 <body>
@@ -108,10 +109,18 @@
       </h2>
       <div class="l-inner">
         <article class="c-weather is-today">
-          <h3>今日の天気<span id="todaysWeather"></span></h3>
+          <h3>今日の天気</h3>
+          <span id="todaysWeather"></span>
+          <span id="todaysTempMax"></span>
+          <span id="todaysTempMin"></span>
+          <span id="todaysWeatherImg"></span>
         </article>
         <article class="c-weather is-tommorow">
-          <h3>明日の天気<span id="tommorowsWeather"></span></h3>
+          <h3>明日の天気</h3>
+          <span id="tommorowsWeather"></span>
+          <span id="tommorowsTempMax"></span>
+          <span id="tommorowsTempMin"></span>
+          <span id="tommorowsWeatherImg"></span>
         </article>
       </div>
     </section>
@@ -123,11 +132,41 @@
       </h2>
       <div class="l-inner">
         <ul class="p-weather--week__container">
-          <li class="dayAfterTommorw"></li>
-          <li class="forDaysLayter"></li>
-          <li class="fiveDaisLayter"></li>
-          <li class="sixDaysLaiter"></li>
-          <li class="oneWeekLater"></li>
+          <li class="dayAfterTommorw">
+            <span id="dayAfterTommorow"></span>
+            <span id="dayAfterTommorowWeather"></span>
+            <span id="dayAfterTommorowTempMax"></span>
+            <span id="dayAfterTommorowTempMin"></span>
+            <span id="dayAfterTommorowWeatherImg"></span>
+          </li>
+          <li class="threeDayLayter">
+            <span id="threeDayLater"></span>
+            <span id="threeDayLaterWeather"></span>
+            <span id="threeDayLaterTempMax"></span>
+            <span id="threeDayLaterTempMin"></span>
+            <span id="threeDayLaterWeatherImg"></span>
+          </li>
+          <li class="foureDaiLayter">
+            <span id="fourDayLater"></span>
+            <span id="fourDayLaterWeather"></span>
+            <span id="fourDayLaterTempMax"></span>
+            <span id="fourDayLaterTempMin"></span>
+            <span id="fourDayLaterWeatherImg"></span>
+          </li>
+          <li class="fiveDayLaiter">
+            <span id="fiveDayLater"></span>
+            <span id="fiveDayLaterWeather"></span>
+            <span id="fiveDayLaterTempMax"></span>
+            <span id="fiveDayLaterTempMin"></span>
+            <span id="fiveDayLaterWeatherImg"></span>
+          </li>
+          <li class="sixDayLater">
+            <span id="sixDayLater"></span>
+            <span id="sixDayLaterWeather"></span>
+            <span id="sixDayLaterTempMax"></span>
+            <span id="sixDayLaterTempMin"></span>
+            <span id="sixDayLaterWeatherImg"></span>
+          </li>
         </ul>
       </div>
     </section>
