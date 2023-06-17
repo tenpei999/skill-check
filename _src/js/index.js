@@ -65,13 +65,15 @@ Promise.all([request1, request2])
     /*天気
     -----------------------*/
     //今日の天気
-    const todaysWeather = data2.daily.weathercode[1];
+    const todaysWeatherID = data2.daily.weathercode[1];
+    const todaysWeather = getWeatherInfo(todaysWeatherID).label;;
     const todaysWeatherElementId = 'todaysWeather';
     const todaysWeatherElement = document.getElementById(todaysWeatherElementId);
     todaysWeatherElement.innerHTML = todaysWeather;
 
     //明日の天気
-    const tommorowsWeather = data2.daily.weathercode[2];
+    const tommorowsWeatherID = data2.daily.weathercode[2];
+    const tommorowsWeather = getWeatherInfo(tommorowsWeatherID).label;
     const tommorowsWeatherElementId = 'tommorowsWeather';
     const tommorowsWeatherElement = document.getElementById(tommorowsWeatherElementId);
     tommorowsWeatherElement.innerHTML = tommorowsWeather;
@@ -115,7 +117,7 @@ Promise.all([request1, request2])
     /*天気アイコン
     -----------------------------*/
     //今日の天気アイコン
-    const todaysWeatherImg = getWeatherInfo(todaysWeather).icon;
+    const todaysWeatherImg = getWeatherInfo(todaysWeatherID).icon;
     const todaysWeatherImgElementId = 'todaysWeatherImg';
     const todaysWeatherImgElementIDParent = document.getElementById(todaysWeatherImgElementId);
     const todaysWeatherImgElementChild = document.createElement('img');
@@ -123,7 +125,7 @@ Promise.all([request1, request2])
     todaysWeatherImgElementIDParent.appendChild(todaysWeatherImgElementChild);
 
     //明日の天気アイコン
-    const tommorowsWeatherImg = getWeatherInfo(tommorowsWeather).icon;
+    const tommorowsWeatherImg = getWeatherInfo(tommorowsWeatherID).icon;
     const tommorowsWeatherImgElementId = 'tommorowsWeatherImg';
     const tommorowsWeatherImgElementIDParent = document.getElementById(tommorowsWeatherImgElementId);
     const tommorowsWeatherImgElementChild = document.createElement('img');
@@ -271,43 +273,43 @@ Promise.all([request1, request2])
     -----------------------------*/
 
     //今日-昨日
-    const DBRTodayMax = todaysTempMax - yesterdayTempMax;
+    const DBRTodayMax = Math.floor(todaysTempMax - yesterdayTempMax);
     const DBRTodayMaxElementID = 'DBRTodaysMax';
     const DBRTodayMaxElement = document.getElementById(DBRTodayMaxElementID);
     DBRTodayMaxElement.innerHTML = DBRTodayMax;
 
     //明日-今日
-    const DBRTommorowMax = tommorowsTempMax - todaysTempMax;
+    const DBRTommorowMax = Math.floor(tommorowsTempMax - todaysTempMax);
     const DBRTommorowMaxElementID = 'DBRTommorowMax';
     const DBRTommorowMaxElement = document.getElementById(DBRTommorowMaxElementID);
     DBRTommorowMaxElement.innerHTML = DBRTommorowMax;
 
     //明後日-明日
-    const DBRDayAfterTommorowMax = dayAfterTommorowTempMax - tommorowsTempMax;
+    const DBRDayAfterTommorowMax = Math.floor(dayAfterTommorowTempMax - tommorowsTempMax);
     const DBRDayAfterTommorowMaxElementID = 'DBRDayAfterTommorowMax';
     const DBRDayAfterTommorowMaxElement = document.getElementById(DBRDayAfterTommorowMaxElementID);
     DBRDayAfterTommorowMaxElement.innerHTML = DBRDayAfterTommorowMax;
 
     //三日後-明後日
-    const DBRthreeDayLaterMax = threeDayLaterTempMax - dayAfterTommorowTempMax;
+    const DBRthreeDayLaterMax = Math.floor(threeDayLaterTempMax - dayAfterTommorowTempMax);
     const DBRthreeDayLaterMaxElementID = 'DBRthreeDayLaterMax';
     const DBRthreeDayLaterMaxElement = document.getElementById(DBRthreeDayLaterMaxElementID);
     DBRthreeDayLaterMaxElement.innerHTML = DBRthreeDayLaterMax;
 
     //四日後-三日後
-    const DBRfourDayLaterMax = fourDayLaterTempMax - threeDayLaterTempMax;
+    const DBRfourDayLaterMax = Math.floor(fourDayLaterTempMax - threeDayLaterTempMax);
     const DBRfourDayLaterMaxElementID = 'DBRfourDayLaterMax';
     const DBRfourDayLaterMaxElement = document.getElementById(DBRfourDayLaterMaxElementID);
     DBRfourDayLaterMaxElement.innerHTML = DBRfourDayLaterMax;
 
     //五日後-四日後
-    const DBRfiveDayLaterMax = fiveDayLaterTempMax - fourDayLaterTempMax;
+    const DBRfiveDayLaterMax = Math.floor(fiveDayLaterTempMax - fourDayLaterTempMax);
     const DBRfiveDayLaterMaxElementID = 'DBRfiveDayLaterMax';
     const DBRfiveDayLaterMaxElement = document.getElementById(DBRfiveDayLaterMaxElementID);
     DBRfiveDayLaterMaxElement.innerHTML = DBRfiveDayLaterMax;
 
     //六日後-五日後
-    const DBRsixDayLaterMax = sixDayLaterTempMax - fiveDayLaterTempMax;
+    const DBRsixDayLaterMax = Math.floor(sixDayLaterTempMax - fiveDayLaterTempMax);
     const DBRsixDayLaterMaxElementID = 'DBRsixDayLaterMax';
     const DBRsixDayLaterMaxElement = document.getElementById(DBRsixDayLaterMaxElementID);
     DBRsixDayLaterMaxElement.innerHTML = DBRsixDayLaterMax;
@@ -315,45 +317,45 @@ Promise.all([request1, request2])
 
     /*前日比(最低)
     -----------------------------*/
-    
+
     //今日-昨日
-    const DBRTodayMin = todaysTempMin - yesterdayTempMin;
-    const DBRTodayMinElementID = 'DBRTodaysMin';
+    const DBRTodayMin = Math.floor(todaysTempMin - yesterdayTempMin);
+    const DBRTodayMinElementID = 'DBRTodayMin';
     const DBRTodayMinElement = document.getElementById(DBRTodayMinElementID);
     DBRTodayMinElement.innerHTML = DBRTodayMin;
-    
+
     //明日-今日
-    const DBRTommorowMin = tommorowsTempMin - todaysTempMin;
+    const DBRTommorowMin = Math.floor(tommorowsTempMin - todaysTempMin);
     const DBRTommorowMinElementID = 'DBRTommorowMin';
     const DBRTommorowMinElement = document.getElementById(DBRTommorowMinElementID);
     DBRTommorowMinElement.innerHTML = DBRTommorowMin;
 
     //明後日-明日
-    const DBRDayAfterTommorowMin = dayAfterTommorowTempMin - tommorowsTempMin;
+    const DBRDayAfterTommorowMin = Math.floor(dayAfterTommorowTempMin - tommorowsTempMin);
     const DBRDayAfterTommorowMinElementID = 'DBRDayAfterTommorowMin';
     const DBRDayAfterTommorowMinElement = document.getElementById(DBRDayAfterTommorowMinElementID);
     DBRDayAfterTommorowMinElement.innerHTML = DBRDayAfterTommorowMin;
 
     //三日後-明後日
-    const DBRthreeDayLaterMin = threeDayLaterTempMin - dayAfterTommorowTempMin;
+    const DBRthreeDayLaterMin = Math.floor(threeDayLaterTempMin - dayAfterTommorowTempMin);
     const DBRthreeDayLaterMinElementID = 'DBRthreeDayLaterMin';
     const DBRthreeDayLaterMinElement = document.getElementById(DBRthreeDayLaterMinElementID);
     DBRthreeDayLaterMinElement.innerHTML = DBRthreeDayLaterMin;
 
     //四日後-三日後
-    const DBRfourDayLaterMin = fourDayLaterTempMin - threeDayLaterTempMin;
+    const DBRfourDayLaterMin = Math.floor(fourDayLaterTempMin - threeDayLaterTempMin);
     const DBRfourDayLaterMinElementID = 'DBRfourDayLaterMin';
     const DBRfourDayLaterMinElement = document.getElementById(DBRfourDayLaterMinElementID);
     DBRfourDayLaterMinElement.innerHTML = DBRfourDayLaterMin;
 
     //五日後-四日後
-    const DBRfiveDayLaterMin = fiveDayLaterTempMin - fourDayLaterTempMin;
+    const DBRfiveDayLaterMin = Math.floor(fiveDayLaterTempMin - fourDayLaterTempMin);
     const DBRfiveDayLaterMinElementID = 'DBRfiveDayLaterMin';
     const DBRfiveDayLaterMinElement = document.getElementById(DBRfiveDayLaterMinElementID);
     DBRfiveDayLaterMinElement.innerHTML = DBRfiveDayLaterMin;
 
     //六日後-五日後
-    const DBRsixDayLaterMin = sixDayLaterTempMin - fiveDayLaterTempMin;
+    const DBRsixDayLaterMin = Math.floor(sixDayLaterTempMin - fiveDayLaterTempMin);
     const DBRsixDayLaterMinElementID = 'DBRsixDayLaterMin';
     const DBRsixDayLaterMinElement = document.getElementById(DBRsixDayLaterMinElementID);
     DBRsixDayLaterMinElement.innerHTML = DBRsixDayLaterMin;
@@ -363,7 +365,7 @@ Promise.all([request1, request2])
     -----------------------------*/
 
     /*今日--*/
-   //時間帯
+    //時間帯
     const todayschanceOfRain1 = data1.forecasts[0].chanceOfRain.T00_06;
     const todayschanceOfRain2 = data1.forecasts[0].chanceOfRain.T06_12;
     const todayschanceOfRain3 = data1.forecasts[0].chanceOfRain.T12_18;

@@ -443,6 +443,17 @@ p {
   padding-bottom: 0.8rem;
 }
 
+.p-weather--today__days {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 737px) {
+  .p-weather--today__days {
+    flex-direction: row;
+  }
+}
+
 .u-mt0 {
   margin-top: 0 !important;
 }
