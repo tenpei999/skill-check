@@ -1,10 +1,7 @@
 .c-weather {
-  &.is-today,
-  &.is-tomorrow {
-    width: 100%;
-    text-align: center;
-    background-color: $bgColorWhite;
-  }
+  width: 100%;
+  text-align: center;
+  background-color: $bgColorWhite;
 
   &.is-today {
     @media #{$pc} {
@@ -16,6 +13,13 @@
       width: 34.5%;
     }
   }
+  &.is-week {
+    background-color: $bgColorOdd;
+    @media #{$pc} {
+      width: 18.4%;
+    }
+  }
+
   &__temp {
     &--wrapper {
       display: flex;

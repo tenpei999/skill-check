@@ -44,9 +44,8 @@
 
   &__weather {
     padding: 1rem;
-    &.is-today {
-      background-color: $bgColorSky;
-    }
+    background-color: $bgColorSky;
+    
     &.is-tomorrow {
       background-color: $bgColorCloud;
     }

@@ -12,4 +12,16 @@
       }
     }
   }
+  &--week {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      @media #{$pc} {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 0;
+      }
+    }
+  }
 }

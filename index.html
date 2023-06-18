@@ -109,7 +109,7 @@
       </h2>
       <div class="l-inner p-weather--today__days">
         <article class="c-weather is-today">
-          <h3 class="c-title__weather is-today">今日の天気</h3>
+          <h3 class="c-title__weather">今日の天気</h3>
           <p id="todaysWeather"></p>
           <span id="todaysWeatherImg"></span>
           <ul class="c-weather__temp--wrapper">
@@ -193,50 +193,80 @@
       </h2>
       <div class="l-inner">
         <ul class="p-weather--week__container">
-          <li class="dayAfterTommorw">
-            <span id="dayAfterTommorow"></span>
-            <span id="dayAfterTommorowWeather"></span>
-            <span id="dayAfterTommorowTempMax"></span>
-            <span id="DBRDayAfterTommorowMax"></span>
-            <span id="dayAfterTommorowTempMin"></span>
-            <span id="DBRDayAfterTommorowMin"></span>
+          <li class="dayAfterTommorw c-weather is-week">
+            <h3 id="dayAfterTommorow" class="c-title__weather"></h3>
+            <p id="dayAfterTommorowWeather"></p>
             <span id="dayAfterTommorowWeatherImg"></span>
+            <ul class="c-weather__temp--wrapper">
+              <li class="c-weather__temp--left">
+                <p id="dayAfterTommorowTempMax"></p>
+                <p id="DBRDayAfterTommorowMax"></p>
+              </li>
+              <li class="c-weather__temp--right">
+                <p id="dayAfterTommorowTempMin"></p>
+                <p id="DBRDayAfterTommorowMin"></p>
+              </li>
+            </ul>
           </li>
-          <li class="threeDayLayter">
-            <span id="threeDayLater"></span>
-            <span id="threeDayLaterWeather"></span>
-            <span id="threeDayLaterTempMax"></span>
-            <span id="DBRthreeDayLaterMax"></span>
-            <span id="threeDayLaterTempMin"></span>
-            <span id="DBRthreeDayLaterMin"></span>
+          <li class="threeDayLayter c-weather is-week">
+            <h3 id="threeDayLater" class="c-title__weather"></h3>
+            <p id="threeDayLaterWeather"></p>
             <span id="threeDayLaterWeatherImg"></span>
+            <ul class="c-weather__temp--wrapper">
+              <li class="c-weather__temp--left">
+                <p id="threeDayLaterTempMax"></p>
+                <p id="DBRthreeDayLaterMax"></p>
+              </li>
+              <li class="c-weather__temp--right">
+                <p id="threeDayLaterTempMin"></p>
+                <p id="DBRthreeDayLaterMin"></p>
+              </li>
+            </ul>
           </li>
-          <li class="foureDaiLayter">
-            <span id="fourDayLater"></span>
-            <span id="fourDayLaterWeather"></span>
-            <span id="fourDayLaterTempMax"></span>
-            <span id="DBRfourDayLaterMax"></span>
-            <span id="fourDayLaterTempMin"></span>
-            <span id="DBRfourDayLaterMin"></span>
+          <li class="foureDaiLayter c-weather is-week">
+            <h3 id="fourDayLater" class="c-title__weather"></h3>
+            <p id="fourDayLaterWeather"></p>
             <span id="fourDayLaterWeatherImg"></span>
+            <ul class="c-weather__temp--wrapper">
+              <li class="c-weather__temp--left">
+                <p id="fourDayLaterTempMax"></p>
+                <p id="DBRfourDayLaterMax"></p>
+              </li>
+              <li class="c-weather__temp--right">
+                <p id="fourDayLaterTempMin"></p>
+                <p id="DBRfourDayLaterMin"></p>
+              </li>
+            </ul>
           </li>
-          <li class="fiveDayLaiter">
-            <span id="fiveDayLater"></span>
-            <span id="fiveDayLaterWeather"></span>
-            <span id="fiveDayLaterTempMax"></span>
-            <span id="DBRfiveDayLaterMax"></span>
-            <span id="fiveDayLaterTempMin"></span>
-            <span id="DBRfiveDayLaterMin"></span>
+          <li class="fiveDayLaiter c-weather is-week">
+            <h3 id="fiveDayLater" class="c-title__weather"></h3>
+            <p id="fiveDayLaterWeather"></p>
             <span id="fiveDayLaterWeatherImg"></span>
+            <ul class="c-weather__temp--wrapper">
+              <li class="c-weather__temp--left">
+                <p id="fiveDayLaterTempMax"></p>
+                <p id="DBRfiveDayLaterMax"></p>
+              </li>
+              <li class="c-weather__temp--right">
+                <p id="fiveDayLaterTempMin"></p>
+                <p id="DBRfiveDayLaterMin"></p>
+              </li>
+            </ul>
           </li>
-          <li class="sixDayLater">
-            <span id="sixDayLater"></span>
-            <span id="sixDayLaterWeather"></span>
-            <span id="sixDayLaterTempMax"></span>
-            <span id="DBRsixDayLaterMax"></span>
-            <span id="sixDayLaterTempMin"></span>
-            <span id="DBRsixDayLaterMin"></span>
+          <li class="sixDayLater c-weather is-week">
+            <h3 id="sixDayLater" class="c-title__weather"></h3>
+            <p id="sixDayLaterWeather"></p>
             <span id="sixDayLaterWeatherImg"></span>
+            <ul class="c-weather__temp--wrapper">
+              <li class="c-weather__temp--left">
+                <p id="sixDayLaterTempMax"></p>
+                <p id="DBRsixDayLaterMax"></p>
+              </li>
+              <li class="c-weather__temp--right">
+                <p id="sixDayLaterTempMin"></p>
+                <p id="DBRsixDayLaterMin"></p>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
