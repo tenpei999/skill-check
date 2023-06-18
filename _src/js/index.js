@@ -22,51 +22,65 @@ Promise.all([request1, request2])
     /*日付
     -----------------------*/
 
-    //昨日の日付
-    const yesterday = data2.daily.time[0];
+    function formatDate(dateString) {
+      const months = [
+        "1月", "2月", "3月", "4月", "5月", "6月",
+        "7月", "8月", "9月", "10月", "11月", "12月"
+      ];
 
-    //今日の日付
-    const today = data2.daily.time[1];
+      const days = ["日", "月", "火", "水", "木", "金", "土"];
 
-    //明日の日付
-    const tommorow = data2.daily.time[2];
+      const date = new Date(dateString);
+      const month = months[date.getMonth()];
+      const day = date.getDate();
+      const dayOfWeek = days[date.getDay()];
+
+      return `${month}${day}日(${dayOfWeek})`;
+    }
+
+    const currentDate = new Date(); // 現在の日付を取得
 
     //明後日の日付
-    const dayAfterTommorow = data2.daily.time[3];
-    const dayAfterTommorowElementId = 'dayAfterTommorow';
-    const dayAfterTommorowElement = document.getElementById(dayAfterTommorowElementId);
-    dayAfterTommorowElement.innerHTML = dayAfterTommorow;
+    const dayAfterTommorow = new Date(currentDate.getTime() + 2 * 24 * 60 * 60 * 1000);
+    const formattedDayAfterTommorow = formatDate(dayAfterTommorow);
+    const dayAfterTommorowElementID = 'dayAfterTommorow';
+    const dayAfterTommorowElement = document.getElementById(dayAfterTommorowElementID);
+    dayAfterTommorowElement.innerHTML = formattedDayAfterTommorow;
 
-    //三日後の日付
-    const threeDayLater = data2.daily.time[4];
-    const threeDayLaterElementId = 'threeDayLater';
-    const threeDayLaterElement = document.getElementById(threeDayLaterElementId);
-    threeDayLaterElement.innerHTML = threeDayLater;
+    // 三日後の日付
+    const threeDayLater = new Date(currentDate.getTime() + 3 * 24 * 60 * 60 * 1000);
+    const formattedThreeDayLater = formatDate(threeDayLater);
+    const threeDayLaterElementID = 'threeDayLater';
+    const threeDayLaterElement = document.getElementById(threeDayLaterElementID);
+    threeDayLaterElement.innerHTML = formattedThreeDayLater;
 
     //四日後の日付
-    const fourDayLater = data2.daily.time[5];
+    const fourDayLater = new Date(currentDate.getTime() + 4 * 24 * 60 * 60 * 1000);
+    const formattedFourDayLater = formatDate(fourDayLater);
     const fourDayLaterElementID = 'fourDayLater';
     const fourDayLaterElement = document.getElementById(fourDayLaterElementID);
-    fourDayLaterElement.innerHTML = fourDayLater;
+    fourDayLaterElement.innerHTML = formattedFourDayLater;
 
     //五日後の日付
-    const fiveDayLater = data2.daily.time[6];
+    const fiveDayLater = new Date(currentDate.getTime() + 5 * 24 * 60 * 60 * 1000);
+    const formattedFiveDayLater = formatDate(fiveDayLater);
     const fiveDayLaterElementID = 'fiveDayLater';
     const fiveDayLaterElement = document.getElementById(fiveDayLaterElementID);
-    fiveDayLaterElement.innerHTML = fiveDayLater;
+    fiveDayLaterElement.innerHTML = formattedFiveDayLater;
 
-    //六日目の日付
-    const sixDayLater = data2.daily.time[7];
+    // 六日後の日付
+    const sixDayLater = new Date(currentDate.getTime() + 6 * 24 * 60 * 60 * 1000);
+    const formattedSixDayLater = formatDate(sixDayLater);
     const sixDayLaterElementID = 'sixDayLater';
     const sixDayLaterElement = document.getElementById(sixDayLaterElementID);
-    sixDayLaterElement.innerHTML = sixDayLater;
+    sixDayLaterElement.innerHTML = formattedSixDayLater;
 
 
     /*天気
     -----------------------*/
     //今日の天気
     const todaysWeatherID = data2.daily.weathercode[1];
-    const todaysWeather = getWeatherInfo(todaysWeatherID).label;;
+    const todaysWeather = getWeatherInfo(todaysWeatherID).label;
     const todaysWeatherElementId = 'todaysWeather';
     const todaysWeatherElement = document.getElementById(todaysWeatherElementId);
     todaysWeatherElement.innerHTML = todaysWeather;
@@ -410,5 +424,6 @@ Promise.all([request1, request2])
     tommorowsChanceOfRainElement2.innerHTML = tommorowschanceOfRain2;
     tommorowsChanceOfRainElement3.innerHTML = tommorowschanceOfRain3;
     tommorowsChanceOfRainElement4.innerHTML = tommorowschanceOfRain4;
+
   });
 
