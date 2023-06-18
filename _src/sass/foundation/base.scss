@@ -12,7 +12,6 @@ body {
   font-family: $skillCheckFontFamily;
   letter-spacing: $baseLetterSpacing;
   line-height: $baseLineHeight;
-  -webkit-font-smoothing: antialiased;
   font-size: 1.6rem;
 }
 
@@ -25,8 +24,6 @@ body {
 
 html {
   font-size: 62.5%;
-
-  -webkit-text-size-adjust: 62.5%;
 }
 
 @media #{$sp} {

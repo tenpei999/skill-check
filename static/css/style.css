@@ -242,7 +242,6 @@ body {
   font-family: "noto-sans-cjk-jp", sans-serif;
   letter-spacing: 0;
   line-height: 1.75;
-  -webkit-font-smoothing: antialiased;
   font-size: 1.6rem;
 }
 
@@ -254,7 +253,6 @@ body {
 
 html {
   font-size: 62.5%;
-  -webkit-text-size-adjust: 62.5%;
 }
 
 @media only screen and (max-width: 736px) {
@@ -407,18 +405,29 @@ p {
 }
 
 .c-title__weather {
-  padding: 1rem;
+  padding: 2.1rem 0;
   background-color: #E7F0FC;
+  color: #4A90E2;
+  font-size: 2rem;
+  border-radius: 7px 7px 0 0;
 }
 
 .c-title__weather.is-tomorrow {
   background-color: #E4E4E4;
+  color: #333;
+}
+
+@media only screen and (max-width: 736px) {
+  .c-title__weather.is-tomorrow {
+    font-size: 1.6rem;
+  }
 }
 
 .c-weather {
   width: 100%;
   text-align: center;
   background-color: #fff;
+  border-radius: 0 0 7px 7px;
 }
 
 @media only screen and (min-width: 737px) {
@@ -429,7 +438,7 @@ p {
 
 @media only screen and (min-width: 737px) {
   .c-weather.is-tomorrow {
-    width: 34.5%;
+    width: 33.9%;
   }
 }
 
@@ -446,6 +455,14 @@ p {
 .c-weather__temp--wrapper {
   display: flex;
   justify-content: center;
+}
+
+.c-weather__temp--left {
+  color: #ff0000;
+}
+
+.c-weather__temp--right {
+  color: #4A90E2;
 }
 
 .c-weather__chanceOfRain {

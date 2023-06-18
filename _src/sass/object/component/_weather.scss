@@ -2,6 +2,7 @@
   width: 100%;
   text-align: center;
   background-color: $bgColorWhite;
+  border-radius: 0 0 7px 7px;
 
   &.is-today {
     @media #{$pc} {
@@ -10,7 +11,7 @@
   }
   &.is-tomorrow {
     @media #{$pc} {
-      width: 34.5%;
+      width: 33.9%;
     }
   }
   &.is-week {
@@ -24,6 +25,12 @@
     &--wrapper {
       display: flex;
       justify-content: center;
+    }
+    &--left {
+      color: $textred1;
+    }
+    &--right {
+      color: $textBlue1;
     }
   }
   &__chanceOfRain {

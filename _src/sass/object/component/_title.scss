@@ -43,11 +43,18 @@
   }
 
   &__weather {
-    padding: 1rem;
+    padding: 2.1rem 0;
     background-color: $bgColorSky;
+    color: $textBlue1;
+    font-size: 2rem;
+    border-radius: 7px 7px 0 0;
     
     &.is-tomorrow {
       background-color: $bgColorCloud;
+      color: $baseTextColor;
+      @media #{$sp} {
+        font-size: 1.6rem;
+      }
     }
   }
 }
