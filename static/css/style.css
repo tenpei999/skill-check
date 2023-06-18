@@ -406,6 +406,14 @@ p {
   color: #4A90E2;
 }
 
+.c-title__weather {
+  padding: 1rem;
+}
+
+.c-weather__temp--wrapper {
+  display: flex;
+}
+
 .c-bg__color {
   background: #F7F9FB 0% 0% no-repeat padding-box;
 }

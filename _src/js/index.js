@@ -283,96 +283,35 @@ Promise.all([request1, request2])
     sixDayLaterTempMinElement.innerHTML = sixDayLaterTempMin;
 
 
-    /*前日比(最高)
+    /*前日比
     -----------------------------*/
 
-    //今日-昨日
-    const DBRTodayMax = Math.floor(todaysTempMax - yesterdayTempMax);
-    const DBRTodayMaxElementID = 'DBRTodaysMax';
-    const DBRTodayMaxElement = document.getElementById(DBRTodayMaxElementID);
-    DBRTodayMaxElement.innerHTML = DBRTodayMax;
+    // 差分を計算して表示する関数
+    function calculateAndDisplayDifference(currentTemp, previousTemp, elementID) {
+      const difference = Math.floor(currentTemp - previousTemp);
+      const sign = difference > 0 ? "+" : "-";
 
-    //明日-今日
-    const DBRTommorowMax = Math.floor(tommorowsTempMax - todaysTempMax);
-    const DBRTommorowMaxElementID = 'DBRTommorowMax';
-    const DBRTommorowMaxElement = document.getElementById(DBRTommorowMaxElementID);
-    DBRTommorowMaxElement.innerHTML = DBRTommorowMax;
+      const element = document.getElementById(elementID);
+      element.innerHTML = '[' + sign + Math.abs(difference) + ']';
+    }
 
-    //明後日-明日
-    const DBRDayAfterTommorowMax = Math.floor(dayAfterTommorowTempMax - tommorowsTempMax);
-    const DBRDayAfterTommorowMaxElementID = 'DBRDayAfterTommorowMax';
-    const DBRDayAfterTommorowMaxElement = document.getElementById(DBRDayAfterTommorowMaxElementID);
-    DBRDayAfterTommorowMaxElement.innerHTML = DBRDayAfterTommorowMax;
+    //最高気温
+    calculateAndDisplayDifference(todaysTempMax, yesterdayTempMax, 'DBRTodaysMax');
+    calculateAndDisplayDifference(tommorowsTempMax, todaysTempMax, 'DBRTommorowMax');
+    calculateAndDisplayDifference(dayAfterTommorowTempMax, tommorowsTempMax, 'DBRDayAfterTommorowMax');
+    calculateAndDisplayDifference(threeDayLaterTempMax, dayAfterTommorowTempMax, 'DBRthreeDayLaterMax');
+    calculateAndDisplayDifference(fourDayLaterTempMax, threeDayLaterTempMax, 'DBRfourDayLaterMax');
+    calculateAndDisplayDifference(fiveDayLaterTempMax, fourDayLaterTempMax, 'DBRfiveDayLaterMax');
+    calculateAndDisplayDifference(sixDayLaterTempMax, fiveDayLaterTempMax, 'DBRsixDayLaterMax');
 
-    //三日後-明後日
-    const DBRthreeDayLaterMax = Math.floor(threeDayLaterTempMax - dayAfterTommorowTempMax);
-    const DBRthreeDayLaterMaxElementID = 'DBRthreeDayLaterMax';
-    const DBRthreeDayLaterMaxElement = document.getElementById(DBRthreeDayLaterMaxElementID);
-    DBRthreeDayLaterMaxElement.innerHTML = DBRthreeDayLaterMax;
-
-    //四日後-三日後
-    const DBRfourDayLaterMax = Math.floor(fourDayLaterTempMax - threeDayLaterTempMax);
-    const DBRfourDayLaterMaxElementID = 'DBRfourDayLaterMax';
-    const DBRfourDayLaterMaxElement = document.getElementById(DBRfourDayLaterMaxElementID);
-    DBRfourDayLaterMaxElement.innerHTML = DBRfourDayLaterMax;
-
-    //五日後-四日後
-    const DBRfiveDayLaterMax = Math.floor(fiveDayLaterTempMax - fourDayLaterTempMax);
-    const DBRfiveDayLaterMaxElementID = 'DBRfiveDayLaterMax';
-    const DBRfiveDayLaterMaxElement = document.getElementById(DBRfiveDayLaterMaxElementID);
-    DBRfiveDayLaterMaxElement.innerHTML = DBRfiveDayLaterMax;
-
-    //六日後-五日後
-    const DBRsixDayLaterMax = Math.floor(sixDayLaterTempMax - fiveDayLaterTempMax);
-    const DBRsixDayLaterMaxElementID = 'DBRsixDayLaterMax';
-    const DBRsixDayLaterMaxElement = document.getElementById(DBRsixDayLaterMaxElementID);
-    DBRsixDayLaterMaxElement.innerHTML = DBRsixDayLaterMax;
-
-
-    /*前日比(最低)
-    -----------------------------*/
-
-    //今日-昨日
-    const DBRTodayMin = Math.floor(todaysTempMin - yesterdayTempMin);
-    const DBRTodayMinElementID = 'DBRTodayMin';
-    const DBRTodayMinElement = document.getElementById(DBRTodayMinElementID);
-    DBRTodayMinElement.innerHTML = DBRTodayMin;
-
-    //明日-今日
-    const DBRTommorowMin = Math.floor(tommorowsTempMin - todaysTempMin);
-    const DBRTommorowMinElementID = 'DBRTommorowMin';
-    const DBRTommorowMinElement = document.getElementById(DBRTommorowMinElementID);
-    DBRTommorowMinElement.innerHTML = DBRTommorowMin;
-
-    //明後日-明日
-    const DBRDayAfterTommorowMin = Math.floor(dayAfterTommorowTempMin - tommorowsTempMin);
-    const DBRDayAfterTommorowMinElementID = 'DBRDayAfterTommorowMin';
-    const DBRDayAfterTommorowMinElement = document.getElementById(DBRDayAfterTommorowMinElementID);
-    DBRDayAfterTommorowMinElement.innerHTML = DBRDayAfterTommorowMin;
-
-    //三日後-明後日
-    const DBRthreeDayLaterMin = Math.floor(threeDayLaterTempMin - dayAfterTommorowTempMin);
-    const DBRthreeDayLaterMinElementID = 'DBRthreeDayLaterMin';
-    const DBRthreeDayLaterMinElement = document.getElementById(DBRthreeDayLaterMinElementID);
-    DBRthreeDayLaterMinElement.innerHTML = DBRthreeDayLaterMin;
-
-    //四日後-三日後
-    const DBRfourDayLaterMin = Math.floor(fourDayLaterTempMin - threeDayLaterTempMin);
-    const DBRfourDayLaterMinElementID = 'DBRfourDayLaterMin';
-    const DBRfourDayLaterMinElement = document.getElementById(DBRfourDayLaterMinElementID);
-    DBRfourDayLaterMinElement.innerHTML = DBRfourDayLaterMin;
-
-    //五日後-四日後
-    const DBRfiveDayLaterMin = Math.floor(fiveDayLaterTempMin - fourDayLaterTempMin);
-    const DBRfiveDayLaterMinElementID = 'DBRfiveDayLaterMin';
-    const DBRfiveDayLaterMinElement = document.getElementById(DBRfiveDayLaterMinElementID);
-    DBRfiveDayLaterMinElement.innerHTML = DBRfiveDayLaterMin;
-
-    //六日後-五日後
-    const DBRsixDayLaterMin = Math.floor(sixDayLaterTempMin - fiveDayLaterTempMin);
-    const DBRsixDayLaterMinElementID = 'DBRsixDayLaterMin';
-    const DBRsixDayLaterMinElement = document.getElementById(DBRsixDayLaterMinElementID);
-    DBRsixDayLaterMinElement.innerHTML = DBRsixDayLaterMin;
+    //最低気温
+    calculateAndDisplayDifference(todaysTempMin, yesterdayTempMin, 'DBRTodayMin');
+    calculateAndDisplayDifference(tommorowsTempMin, todaysTempMin, 'DBRTommorowMin');
+    calculateAndDisplayDifference(dayAfterTommorowTempMin, tommorowsTempMin, 'DBRDayAfterTommorowMin');
+    calculateAndDisplayDifference(threeDayLaterTempMin, dayAfterTommorowTempMin, 'DBRthreeDayLaterMin');
+    calculateAndDisplayDifference(fourDayLaterTempMin, threeDayLaterTempMin, 'DBRfourDayLaterMin');
+    calculateAndDisplayDifference(fiveDayLaterTempMin, fourDayLaterTempMin, 'DBRfiveDayLaterMin');
+    calculateAndDisplayDifference(sixDayLaterTempMin, fiveDayLaterTempMin, 'DBRsixDayLaterMin');
 
 
     /*時間帯毎の天気
