@@ -352,6 +352,10 @@ p {
   }
 }
 
+.c-hover:hover {
+  color: #4A90E2;
+}
+
 .c-text__footer {
   text-align: center;
 }
@@ -452,9 +456,25 @@ p {
   }
 }
 
+.c-weather__weather {
+  padding: 24px 0 10px 0;
+}
+
+.c-weather__img > img {
+  padding-bottom: 30px;
+}
+
 .c-weather__temp--wrapper {
   display: flex;
   justify-content: center;
+  gap: 16px;
+  padding-bottom: 24px;
+}
+
+.c-weather__temp--wrapper .max,
+.c-weather__temp--wrapper .min {
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .c-weather__temp--left {
@@ -469,6 +489,11 @@ p {
   display: flex;
   justify-content: center;
   gap: 8px;
+  padding-bottom: 24px;
+}
+
+.c-weather__chanceOfRain .index {
+  padding-right: 3%;
 }
 
 .c-weather__chanceOfRain .time,

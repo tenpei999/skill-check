@@ -9,15 +9,28 @@
       width: 64.5%;
     }
   }
+
   &.is-tomorrow {
     @media #{$pc} {
       width: 33.9%;
     }
   }
+
   &.is-week {
     background-color: $bgColorOdd;
+
     @media #{$pc} {
       width: 18.4%;
+    }
+  }
+
+  &__weather {
+    padding: $basePadding 0 10px 0;
+  }
+
+  &__img {
+    &>img {
+      padding-bottom: 30px;
     }
   }
 
@@ -25,19 +38,36 @@
     &--wrapper {
       display: flex;
       justify-content: center;
+      gap: 16px;
+      padding-bottom: $basePadding;
+
+      .max,
+      .min {
+        font-size: $fontSizeLv2;
+        font-weight: $fontWeightBold;
+      }
     }
+
     &--left {
       color: $textred1;
     }
+
     &--right {
       color: $textBlue1;
     }
   }
+
   &__chanceOfRain {
     display: flex;
     justify-content: center;
     gap: 8px;
-    .time, 
+    padding-bottom: $basePadding;
+
+    .index {
+      padding-right: 3%;
+    }
+
+    .time,
     .rain {
       text-align: center;
     }
