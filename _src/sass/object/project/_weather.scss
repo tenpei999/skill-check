@@ -3,9 +3,12 @@
     &__days {
       display: flex;
       flex-direction: column;
+      gap: 30px;
 
       @media #{$pc} {
         flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
       }
     }
   }

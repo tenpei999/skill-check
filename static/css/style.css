@@ -410,8 +410,46 @@ p {
   padding: 1rem;
 }
 
+.c-title__weather.is-today {
+  background-color: #E7F0FC;
+}
+
+.c-title__weather.is-tomorrow {
+  background-color: #E4E4E4;
+}
+
+.c-weather.is-today, .c-weather.is-tomorrow {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+}
+
+@media only screen and (min-width: 737px) {
+  .c-weather.is-today {
+    width: 64.5%;
+  }
+}
+
+@media only screen and (min-width: 737px) {
+  .c-weather.is-tomorrow {
+    width: 34.5%;
+  }
+}
+
 .c-weather__temp--wrapper {
   display: flex;
+  justify-content: center;
+}
+
+.c-weather__chanceOfRain {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.c-weather__chanceOfRain .time,
+.c-weather__chanceOfRain .rain {
+  text-align: center;
 }
 
 .c-bg__color {
@@ -454,11 +492,14 @@ p {
 .p-weather--today__days {
   display: flex;
   flex-direction: column;
+  gap: 30px;
 }
 
 @media only screen and (min-width: 737px) {
   .p-weather--today__days {
     flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
   }
 }
 

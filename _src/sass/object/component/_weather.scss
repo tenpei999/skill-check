@@ -1,0 +1,34 @@
+.c-weather {
+  &.is-today,
+  &.is-tomorrow {
+    width: 100%;
+    text-align: center;
+    background-color: $bgColorWhite;
+  }
+
+  &.is-today {
+    @media #{$pc} {
+      width: 64.5%;
+    }
+  }
+  &.is-tomorrow {
+    @media #{$pc} {
+      width: 34.5%;
+    }
+  }
+  &__temp {
+    &--wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__chanceOfRain {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    .time, 
+    .rain {
+      text-align: center;
+    }
+  }
+}
