@@ -25,12 +25,12 @@
   }
 
   &__weather {
-    padding: $basePadding 0 5px 0;
+    padding: 22px 0 5px 0;
   }
 
   &__img {
     &>img {
-      padding-bottom: $basePadding;
+      padding-bottom: 19px;
     }
   }
 
@@ -45,6 +45,7 @@
       .min {
         font-size: $fontSizeLv2;
         font-weight: $fontWeightBold;
+        line-height: 1.5;
         .celsius {
           font-size: $fontSizeLv3;
           font-weight: $fontWeightNormal;

@@ -24,8 +24,8 @@
         content: "";
         position: absolute;
         height: 8px;
-        width: 50%;
-        bottom: -17px;
+        width: 80px;
+        bottom: -45%;
         right: 25%;
         border-radius: 5px;
         background: $linearBrue;
@@ -43,7 +43,7 @@
   }
 
   &__weather {
-    padding: 2.1rem 0;
+    padding: 2rem 0;
     background-color: $bgColorSky;
     color: $textBlue1;
     font-size: $fontSizeLv2;

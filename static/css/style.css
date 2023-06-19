@@ -398,8 +398,8 @@ p {
   content: "";
   position: absolute;
   height: 8px;
-  width: 50%;
-  bottom: -17px;
+  width: 80px;
+  bottom: -45%;
   right: 25%;
   border-radius: 5px;
   background: linear-gradient(90deg, #04a6f1, #016ac8);
@@ -414,7 +414,7 @@ p {
 }
 
 .c-title__weather {
-  padding: 2.1rem 0;
+  padding: 2rem 0;
   background-color: #E7F0FC;
   color: #4A90E2;
   font-size: 2rem;
@@ -462,11 +462,11 @@ p {
 }
 
 .c-weather__weather {
-  padding: 24px 0 5px 0;
+  padding: 22px 0 5px 0;
 }
 
 .c-weather__img > img {
-  padding-bottom: 24px;
+  padding-bottom: 19px;
 }
 
 .c-weather__temp--wrapper {
@@ -480,6 +480,7 @@ p {
 .c-weather__temp--wrapper .min {
   font-size: 2rem;
   font-weight: 700;
+  line-height: 1.5;
 }
 
 .c-weather__temp--wrapper .max .celsius,
