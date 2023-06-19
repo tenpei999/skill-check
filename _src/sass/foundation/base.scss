@@ -26,12 +26,6 @@ html {
   font-size: 62.5%;
 }
 
-@media #{$sp} {
-  html {
-    font-size: $baseFontSize;
-  }
-}
-
 html,
 body {
   height: 100%;

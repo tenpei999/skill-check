@@ -255,12 +255,6 @@ html {
   font-size: 62.5%;
 }
 
-@media only screen and (max-width: 736px) {
-  html {
-    font-size: 14px;
-  }
-}
-
 html,
 body {
   height: 100%;
@@ -355,6 +349,10 @@ p {
   .c-br--title__site {
     display: none;
   }
+}
+
+.c-hover {
+  word-break: break-all;
 }
 
 .c-hover:hover {
