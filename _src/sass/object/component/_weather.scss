@@ -6,13 +6,13 @@
 
   &.is-today {
     @media #{$pc} {
-      width: 64.5%;
+      width: 58.3%;
     }
   }
 
   &.is-tomorrow {
     @media #{$pc} {
-      width: 33.9%;
+      width: 40%;
     }
   }
 
@@ -25,12 +25,12 @@
   }
 
   &__weather {
-    padding: $basePadding 0 10px 0;
+    padding: $basePadding 0 5px 0;
   }
 
   &__img {
     &>img {
-      padding-bottom: 30px;
+      padding-bottom: $basePadding;
     }
   }
 
@@ -45,6 +45,11 @@
       .min {
         font-size: $fontSizeLv2;
         font-weight: $fontWeightBold;
+        .celsius {
+          font-size: $fontSizeLv3;
+          font-weight: $fontWeightNormal;
+          padding-left: 0.5rem;
+        }
       }
     }
 
@@ -63,13 +68,14 @@
     gap: 8px;
     padding-bottom: $basePadding;
 
-    .index {
-      padding-right: 3%;
+    &-index {
+      padding-right: 15px;
     }
 
     .time,
     .rain {
       text-align: center;
+      line-height: 1.5;
     }
   }
 }

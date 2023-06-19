@@ -189,6 +189,7 @@ Promise.all([request1, request2])
 
     /*最高気温
     -----------------------------*/
+
     //昨日の最高気温
     const yesterdayTempMax = data2.daily.temperature_2m_max[0];
 

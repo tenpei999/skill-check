@@ -335,10 +335,15 @@ p {
   src: local("Noto Sans JP Bold"), url("../fonts/NotoSansJP-Bold.woff2") format("woff2");
 }
 
+.l-inner {
+  padding: 0 16px;
+}
+
 @media only screen and (min-width: 737px) {
   .l-inner {
-    max-width: 1000px;
+    max-width: 1080px;
     margin: auto;
+    padding: 0;
   }
 }
 
@@ -436,13 +441,13 @@ p {
 
 @media only screen and (min-width: 737px) {
   .c-weather.is-today {
-    width: 64.5%;
+    width: 58.3%;
   }
 }
 
 @media only screen and (min-width: 737px) {
   .c-weather.is-tomorrow {
-    width: 33.9%;
+    width: 40%;
   }
 }
 
@@ -457,11 +462,11 @@ p {
 }
 
 .c-weather__weather {
-  padding: 24px 0 10px 0;
+  padding: 24px 0 5px 0;
 }
 
 .c-weather__img > img {
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 
 .c-weather__temp--wrapper {
@@ -475,6 +480,13 @@ p {
 .c-weather__temp--wrapper .min {
   font-size: 2rem;
   font-weight: 700;
+}
+
+.c-weather__temp--wrapper .max .celsius,
+.c-weather__temp--wrapper .min .celsius {
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding-left: 0.5rem;
 }
 
 .c-weather__temp--left {
@@ -492,13 +504,14 @@ p {
   padding-bottom: 24px;
 }
 
-.c-weather__chanceOfRain .index {
-  padding-right: 3%;
+.c-weather__chanceOfRain-index {
+  padding-right: 15px;
 }
 
 .c-weather__chanceOfRain .time,
 .c-weather__chanceOfRain .rain {
   text-align: center;
+  line-height: 1.5;
 }
 
 .c-bg__color {
